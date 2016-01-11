@@ -64,5 +64,6 @@ openssl.pc
 crypto/*/*.S
 crypto/*/*.s
 certs/demo/.0
-include/openssl/rc5.h
+include/
+test/clienthellotest*
 rehash.time
