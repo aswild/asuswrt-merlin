@@ -1,0 +1,3 @@
+[submodule "debian-build"]
+	path = debian-build
+	url = https://github.com/assarbad/build-asuswrt-merlin
