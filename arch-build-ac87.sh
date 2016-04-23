@@ -11,7 +11,28 @@ export PATH=$TOOLCHAIN/bin:$PATH
 export LD_LIBRARY_PATH=$TOOLCHAIN/lib:/usr/lib32:/usr/lib
 export LD_LIBRARY_PRELOAD=$TOOLCHAIN/lib:/usr/lib32:/usr/lib
 
-make -C $RELEASEDIR RT-AC87U
+start_time=$(date +%s)
+if [[ -z $1 ]]; then
+    make -C $RELEASEDIR RT-AC87U
+    make_ret=$?
+else
+    make -C $RELEASEDIR "$@"
+    make_ret=$?
+fi
+end_time=$(date +%s)
+total_time=$(($end_time - $start_time))
+elapsed_time="(total time: $(($total_time / 60))m $(($total_time % 60))s)"
+
+# colors
+reset=`tput sgr0`
+red="$(tput setaf 1)$(tput bold)"
+green="$(tput setaf 2)$(tput bold)"
+
+if [[ $make_ret == 0 ]]; then
+    echo -e "\n  ${green}make SUCCESS ${elapsed_time} ${reset}"
+else
+    echo -e "\n  ${red}make FAILED with exit code ${make_ret}. ${elapsed_time} ${reset}"
+fi
 
 # Besides setting the environment variables above, install these packages with pacman:
 #   ib32-glibc gcc-libs-multilib lib32-elfutils bc id3lib gperf intltool
