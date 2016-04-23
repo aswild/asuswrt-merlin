@@ -1,0 +1,5 @@
+*.o
+.libs/*
+.deps/*
+Makefile
+watchquagga

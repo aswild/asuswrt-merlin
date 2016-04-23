@@ -1,0 +1,4 @@
+.deps/*
+Makefile
+extract.pl
+vtysh_cmd.c
