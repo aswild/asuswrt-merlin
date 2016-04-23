@@ -12,3 +12,11 @@ export LD_LIBRARY_PATH=$TOOLCHAIN/lib:/usr/lib32:/usr/lib
 export LD_LIBRARY_PRELOAD=$TOOLCHAIN/lib:/usr/lib32:/usr/lib
 
 make -C $RELEASEDIR RT-AC87U
+
+# Besides setting the environment variables above, install these packages with pacman:
+#   ib32-glibc gcc-libs-multilib lib32-elfutils bc id3lib gperf intltool
+#
+# The autotools perl scripts look for some hard-coded paths for share files
+# Symlink or copy $TOOLCHAIN/share to /opt/brcm-arm/share
+# Also, copy/symlink the entire toolchain to
+#   /projects/hnd/tools/linux/hndtools-arm-linux-2.6.36-uclibc-4.5.3
