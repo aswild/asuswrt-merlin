@@ -4195,7 +4195,7 @@ ncurses-install:
 		ln -sf libncurses.so.6.0 libncurses.so.6
 
 nano/Makefile:
-	cd nano && autoreconf -i -f && $(CONFIGURE) --prefix=$(INSTALLDIR)/nano/usr \
+	cd nano && $(CONFIGURE) --prefix=$(INSTALLDIR)/nano/usr \
 		CFLAGS="$(EXTRACFLAGS) -Os -I$(TOP)/ncurses/include" \
 		LDFLAGS="$(LDFLAGS) -L$(TOP)/ncurses/lib" \
 		ac_cv_lib_ncursesw_get_wch=no \
