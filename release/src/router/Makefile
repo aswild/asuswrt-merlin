@@ -3570,8 +3570,9 @@ pcre-8.31-clean:
 
 libxml2/stamp-h1:
 	cd libxml2 && \
-	CC=$(CC) AR=$(AR) RANLIB=$(RANLIB) LD=$(LD) CFLAGS="-Os -Wall $(EXTRACFLAGS)" LDFLAGS=-ldl \
-	./$(CONFIGURE) --prefix=/usr --without-python --disable-dependency-tracking
+		autoreconf && \
+		CC=$(CC) AR=$(AR) RANLIB=$(RANLIB) LD=$(LD) CFLAGS="-Os -Wall $(EXTRACFLAGS)" LDFLAGS=-ldl \
+			./$(CONFIGURE) --prefix=/usr --without-python --disable-dependency-tracking
 	touch $@
 
 libxml2: libxml2/stamp-h1
