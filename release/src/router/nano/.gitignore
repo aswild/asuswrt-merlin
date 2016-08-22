@@ -11,3 +11,14 @@ autom4te.cache
 aclocal.m4
 config.h.in
 configure
+Makefile.in
+config.guess
+config.sub
+doc/Makefile.in
+doc/man/Makefile.in
+doc/man/fr/Makefile.in
+doc/syntax/Makefile.in
+doc/texinfo/Makefile.in
+install-sh
+m4/Makefile.in
+src/Makefile.in
