@@ -66,3 +66,8 @@ crypto/*/*.s
 certs/demo/.0
 include/openssl/rc5.h
 rehash.time
+include
+test/clienthellotest
+test/clienthellotest.c
+test/sslv2conftest
+test/sslv2conftest.c

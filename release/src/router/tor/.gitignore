@@ -6,6 +6,7 @@ contrib/dist/tor.service
 contrib/operator-tools/tor.logrotate
 orconfig.h
 src/config/torrc.sample
+src/config/torrc.minimal
 .deps
 .dirstamp
 *.i
@@ -22,4 +23,5 @@ src/test/test-ntor-cl
 src/tools/tor-checkkey
 src/tools/tor-gencert
 src/tools/tor-resolve
-
+scripts/maint/checkOptionDocs.pl
+scripts/maint/updateVersions.pl
