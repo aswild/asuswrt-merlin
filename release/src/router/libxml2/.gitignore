@@ -9,6 +9,7 @@ stamp-h1
 config.log
 config.status
 Makefile
+Makefile.in
 autom4te.cache
 doc/examples/.deps/
 doc/examples/io1
@@ -28,8 +29,16 @@ doc/examples/xpath1
 doc/examples/xpath2
 doc/xmlcatalog.1
 doc/xmllint.1
+doc/Makefile.in
+doc/devhelp/Makefile.in
+doc/examples/Makefile.in
 example/gjobread
 example/.deps/
+example/Makefile.in
+include/Makefile.in
+include/libxml/Makefile.in
+python/Makefile.in
+python/tests/Makefile.in
 runsuite
 runtest
 runxmlconf
@@ -52,6 +61,7 @@ testrecurse
 xml2Conf.sh
 xmlcatalog
 xmllint
+xstc/Makefile.in
 config.h
 include/libxml/xmlversion.h
 libtool

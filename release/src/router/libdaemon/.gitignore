@@ -2,13 +2,17 @@
 *.lo
 *.pc
 Makefile
+Makefile.in
 config.h
 config.log
 config.status
 libtool
 doc/doxygen.conf
+doc/Makefile.in
 examples/testd
+examples/Makefile.in
 libdaemon/libdaemon.la
+libdaemon/Makefile.in
 .libs
 autom4te.cache
 aclocal.m4
