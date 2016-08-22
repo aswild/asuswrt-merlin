@@ -2093,7 +2093,7 @@ libusb-0.1.12-clean:
 	@rm -f libusb-0.1.12/stamp-h1
 
 libdaemon/stamp-h1:
-	cd libdaemon && $(CONFIGURE) ac_cv_func_setpgrp_void=yes \
+	cd libdaemon && autoreconf && $(CONFIGURE) ac_cv_func_setpgrp_void=yes \
 	--disable-dependency-tracking
 	touch $@
 
